@@ -21,7 +21,7 @@ export const Navigation = () => {
   const isMobile = useMedia("(max-width: 1024px)", false);
   const pathname = usePathname();
 
-  const onClick = (href: string) => {
+  const handleClick = (href: string) => {
     router.push(href);
     setIsOpen(false);
   };
@@ -45,7 +45,7 @@ export const Navigation = () => {
               <Button
                 variant={route.href === pathname ? "secondary" : "ghost"}
                 key={route.href}
-                onClick={() => onClick(route.href)}
+                onClick={() => handleClick(route.href)}
                 className="w-full justify-start"
               >
                 {route.label}
