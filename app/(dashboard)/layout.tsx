@@ -8,8 +8,7 @@ export default function DashboardLayout({ children }: Props) {
   return (
     <>
       <Header />
-      <main>
-        <h1>Dashboard Layout</h1>
+      <main className="gap-4 p-4 sm:p-8 lg:p-12">
         {children}
       </main>
     </>
